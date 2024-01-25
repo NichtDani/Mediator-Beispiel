@@ -5,10 +5,25 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Die Klasse ChatRoom implementiert das ChatMediator-Interface.
+ * Diese Klasse verwaltet Benutzer und Gruppen für einen Chat.
+ */
 public class ChatRoom implements ChatMediator {
+    /**
+     * Liste der Benutzer im Chat.
+     */
     private List<User> users;
+
+    /**
+     * Eine Zuordnung von Gruppennamen zu Sets von Benutzern.
+     */
     private Map<String, Set<User>> groups;
 
+    /**
+     * Konstruktor für ChatRoom.
+     * Initialisiert eine neue Benutzerliste und eine neue Gruppenzuordnung.
+     */
     public ChatRoom() {
         this.users = new ArrayList<>();
         this.groups = new HashMap<>();
